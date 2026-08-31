@@ -1,0 +1,106 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan" style="color:#875A7B;">Account Invoice Header Note</h2>
+            <h3 class="oe_slogan">A rich text note above the invoice lines.</h3>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Why this module?</h3>
+            <p class="oe_mt32">
+                Odoo prints the <i>Terms and Conditions</i> below the invoice
+                lines. There is no counterpart above them. Anything that
+                belongs at the top of an invoice &mdash; a greeting, a delivery
+                reference, a project or contract number, a short explanation of
+                what is being billed &mdash; has to be squeezed into the first
+                invoice line or into the address block.
+            </p>
+            <p>
+                This module adds a <b>Header Note</b> field to the invoice. It
+                behaves exactly like the Terms and Conditions, only at the
+                other end of the lines table: rich text, typed per invoice,
+                shown above the lines in the backend and printed above the
+                lines table on the PDF.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Type it where it prints</h3>
+            <p class="oe_mt32">
+                The editor sits on the <i>Invoice Lines</i> tab, directly above
+                the lines. Bold, italic, lists and links are available, because
+                it is the same rich text widget Odoo uses for the Terms and
+                Conditions.
+            </p>
+            <ul>
+                <li>Works on customer invoices, credit notes, vendor bills and
+                    receipts.</li>
+                <li>Copied along when an invoice is duplicated.</li>
+                <li>Stays editable after posting, just like the Terms and
+                    Conditions.</li>
+                <li>An empty note prints nothing at all &mdash; no stray
+                    paragraph, no extra spacing.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Nothing to configure</h3>
+            <p class="oe_mt32">
+                Install it and the field is there. There is no company-wide
+                default and no template list, by design: this is free text that
+                differs from invoice to invoice.
+            </p>
+            <p>
+                If you want reusable, conditional text blocks chosen from a
+                list instead, the OCA modules
+                <b>base_comment_template</b> and <b>account_comment_template</b>
+                cover that case, and can be installed alongside this one.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Technical notes</h3>
+            <ul>
+                <li>Adds the field <code>header_note</code>
+                    (<code>fields.Html</code>) to <code>account.move</code>.</li>
+                <li>Two view inheritances, no core view is replaced: the form
+                    anchors before <code>invoice_line_ids</code>, the report
+                    before the invoice lines table.</li>
+                <li>German translation included.</li>
+                <li>Depends on <code>account</code> only.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Maintainer</h3>
+            <p class="oe_mt32">
+                <img class="oe_picture" src="derico_logo.png" alt="derico"/>
+            </p>
+            <p>
+                This module is maintained by derico.
+                <a href="https://derico.de">derico.de</a> &mdash;
+                <a href="mailto:md@derico.de">md@derico.de</a>
+            </p>
+        </div>
+    </div>
+</section>

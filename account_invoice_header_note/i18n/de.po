@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_header_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_invoice_header_note
+#: model_terms:ir.ui.view,arch_db:account_invoice_header_note.view_move_form
+msgid "Add a note shown above the invoice lines..."
+msgstr "Text oberhalb der Rechnungspositionen ..."
+
+#. module: account_invoice_header_note
+#: model:ir.model.fields,field_description:account_invoice_header_note.field_account_move__header_note
+msgid "Header Note"
+msgstr "Kopftext"
+
+#. module: account_invoice_header_note
+#: model:ir.model.fields,help:account_invoice_header_note.field_account_move__header_note
+msgid ""
+"Free text shown above the invoice lines, both in the form view and on the "
+"printed invoice. The counterpart of the Terms and Conditions printed below "
+"the lines."
+msgstr ""
+"Freier Text oberhalb der Rechnungspositionen, sowohl im Formular als auch "
+"auf der gedruckten Rechnung. Das Gegenstück zu den Zahlungsbedingungen "
+"unterhalb der Positionen."
+
+#. module: account_invoice_header_note
+#: model:ir.model,name:account_invoice_header_note.model_account_move
+msgid "Journal Entry"
+msgstr "Buchungssatz"

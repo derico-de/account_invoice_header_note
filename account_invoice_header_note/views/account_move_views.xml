@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form.header.note</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@id='invoice_tab']/field[@name='invoice_line_ids']" position="before">
+                <field
+                    name="header_note"
+                    nolabel="1"
+                    placeholder="Add a note shown above the invoice lines..."
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
