@@ -7,11 +7,18 @@
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
             <xpath expr="//page[@id='invoice_tab']/field[@name='invoice_line_ids']" position="before">
-                <field
-                    name="header_note"
-                    nolabel="1"
-                    placeholder="Add a note shown above the invoice lines..."
-                />
+                <!-- The wrapping div is not decoration: web reserves
+                     min-height 180px for an html field that is a direct child
+                     of a tab pane, which would push the lines table down on
+                     every invoice. Nested one level deeper the editor stays
+                     small and grows with its content. -->
+                <div>
+                    <field
+                        name="header_note"
+                        nolabel="1"
+                        placeholder="Add a note shown above the invoice lines..."
+                    />
+                </div>
             </xpath>
         </field>
     </record>

@@ -26,9 +26,10 @@ class TestAccountInvoiceHeaderNote(AccountTestInvoicingCommon):
     def test_header_note_field_precedes_lines_in_form(self):
         arch = self.env['account.move'].get_view(self.env.ref('account.view_move_form').id, 'form')['arch']
         page = etree.fromstring(arch).xpath("//page[@id='invoice_tab']")[0]
-        names = [child.get('name') for child in page]
-        self.assertIn('header_note', names)
-        self.assertLess(names.index('header_note'), names.index('invoice_line_ids'))
+        # A union expression returns the nodes in document order, so this
+        # asserts the note really is rendered above the lines.
+        fields = page.xpath(".//field[@name='header_note'] | .//field[@name='invoice_line_ids']")
+        self.assertEqual([f.get('name') for f in fields], ['header_note', 'invoice_line_ids'])
 
     def test_header_note_printed_above_lines(self):
         self.invoice.header_note = f'<p>{NOTE_TEXT}</p>'
